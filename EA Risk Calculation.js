@@ -1013,111 +1013,119 @@ for (var tmpi = 16; tmpi <=22; tmpi++){
 
 var riskMax = @Max(inhriskArray);
 
-switch(inhLike){
-    case "Almost Certain - 5":
-        if (riskMax == 5){
-            var inhrate = 7 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 7 * 8;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 7 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 7 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 7 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Likely - 4":
-        if (riskMax == 5){
-            var inhrate = 5 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 5 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 5 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 5 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 5 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Possible - 3":
-        if (riskMax == 5){
-            var inhrate = 3 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 3 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 3 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 3 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 3 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Unlikely - 2":
-        if (riskMax == 5){
-            var inhrate = 2 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 2 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 2 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 2 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 2 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Rare - 1":
-        if (riskMax == 5){
-            var inhrate = 1.1 * 13;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 1.1 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 1.1 * 5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 1.1 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 1.1 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    default:
-        Result = "";        
+if (riskMax == 1 && inhLike == ""){
+    return "<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+riskMax+"</div>";
+}else if (riskMax > 1 && inhLike == ""){
+    return "Please select Inherent Likelihood";
+}else{
+    switch(inhLike){
+        case "Almost Certain - 5":
+            if (riskMax == 5){
+                var inhrate = 7 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 7 * 8;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 7 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 7 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 7 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Likely - 4":
+            if (riskMax == 5){
+                var inhrate = 5 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 5 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 5 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 5 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 5 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Possible - 3":
+            if (riskMax == 5){
+                var inhrate = 3 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 3 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 3 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 3 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 3 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Unlikely - 2":
+            if (riskMax == 5){
+                var inhrate = 2 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 2 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 2 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 2 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 2 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Rare - 1":
+            if (riskMax == 5){
+                var inhrate = 1.1 * 13;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 1.1 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 1.1 * 5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 1.1 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 1.1 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        default:
+            Result = "";        
+    }
+    return Result;
 }
-return Result;
+
+
 
 
 /*............................Enterprise Residual Risk Rating.......................................*/
@@ -1135,111 +1143,118 @@ for (var tmpi = 16; tmpi <=22; tmpi++){
 
 var riskMax = @Max(resriskArray);
 
-switch(resLike){
-    case "Almost Certain - 5":
-        if (riskMax == 5){
-            var resrate = 7 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 7 * 8;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrresrateate = 7 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 7 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 7 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Likely - 4":
-        if (riskMax == 5){
-            var resrate = 5 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 5 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 5 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 5 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 5 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Possible - 3":
-        if (riskMax == 5){
-            var resrate = 3 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 3 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 3 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 3 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 3 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Unlikely - 2":
-        if (riskMax == 5){
-            var resrate = 2 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 2 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 2 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 2 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 2 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Rare - 1":
-        if (riskMax == 5){
-            var resrate = 1.1 * 13;
-            
-        }else if (riskMax == 4){
-            var resrate = 1.1 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 1.1 * 5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 1.1 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 1.1 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    default:
-        Result = "";        
+if (riskMax == 1 && resLike == ""){
+    return "<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+riskMax+"</div>";
+}else if (riskMax > 1 && resLike == ""){
+    return "Please select Residual Likelihood";
+}else{
+    switch(resLike){
+        case "Almost Certain - 5":
+            if (riskMax == 5){
+                var resrate = 7 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 7 * 8;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrresrateate = 7 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 7 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 7 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Likely - 4":
+            if (riskMax == 5){
+                var resrate = 5 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 5 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 5 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 5 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 5 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Possible - 3":
+            if (riskMax == 5){
+                var resrate = 3 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 3 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 3 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 3 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 3 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Unlikely - 2":
+            if (riskMax == 5){
+                var resrate = 2 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 2 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 2 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 2 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 2 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Rare - 1":
+            if (riskMax == 5){
+                var resrate = 1.1 * 13;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 1.1 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 1.1 * 5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 1.1 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 1.1 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        default:
+            Result = "";        
+    }
+    return Result;
 }
-return Result;
+
 
 
 
@@ -1259,111 +1274,120 @@ for (var tmpi = 16; tmpi <=22; tmpi++){
 var riskMax = @Max(inhriskArray);
 
 
-switch(inhLike){
-    case "Almost Certain - 5":
-        if (riskMax == 5){
-            var inhrate = 7 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 7 * 8;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 7 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 7 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 7 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Likely - 4":
-        if (riskMax == 5){
-            var inhrate = 5 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 5 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 5 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 5 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 5 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Possible - 3":
-        if (riskMax == 5){
-            var inhrate = 3 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 3 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 3 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 3 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 3 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Unlikely - 2":
-        if (riskMax == 5){
-            var inhrate = 2 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 2 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 2 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 2 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 2 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Rare - 1":
-        if (riskMax == 5){
-            var inhrate = 1.1 * 13;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 4){
-            var inhrate = 1.1 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrate = 1.1 * 5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 2){
-            var inhrate = 1.1 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else if (riskMax == 1){
-            var inhrate = 1.1 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    default:
-        Result = "";        
+if (riskMax == 1 && inhLike == ""){
+    return "<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+riskMax+"</div>";
+}else if (riskMax > 1 && inhLike == ""){
+    return "Please select Inherent Likelihood";
+}else{
+    switch(inhLike){
+        case "Almost Certain - 5":
+            if (riskMax == 5){
+                var inhrate = 7 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 7 * 8;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 7 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 7 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 7 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Likely - 4":
+            if (riskMax == 5){
+                var inhrate = 5 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 5 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 5 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 5 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 5 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Possible - 3":
+            if (riskMax == 5){
+                var inhrate = 3 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 3 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 3 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 3 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 3 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Unlikely - 2":
+            if (riskMax == 5){
+                var inhrate = 2 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 2 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 2 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 2 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 2 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Rare - 1":
+            if (riskMax == 5){
+                var inhrate = 1.1 * 13;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var inhrate = 1.1 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrate = 1.1 * 5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 2){
+                var inhrate = 1.1 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else if (riskMax == 1){
+                var inhrate = 1.1 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+inhrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        default:
+            Result = "";        
+    }
+    return Result;
 }
-return Result;
+
+
+
 
 
 /*............................Site Residual Risk Rating.......................................*/
@@ -1381,111 +1405,120 @@ for (var tmpi = 16; tmpi <=22; tmpi++){
 
 var riskMax = @Max(resriskArray);
 
-switch(resLike){
-    case "Almost Certain - 5":
-        if (riskMax == 5){
-            var resrate = 7 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 7 * 8;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var inhrresrateate = 7 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 7 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 7 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Likely - 4":
-        if (riskMax == 5){
-            var resrate = 5 * 13;
-            Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 5 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 5 * 5;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 5 * 2.5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 5 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Possible - 3":
-        if (riskMax == 5){
-            var resrate = 3 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 3 * 8;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 3 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 3 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 3 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Unlikely - 2":
-        if (riskMax == 5){
-            var resrate = 2 * 13;
-            Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
-        }else if (riskMax == 4){
-            var resrate = 2 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 2 * 5;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 2 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 2 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    case "Rare - 1":
-        if (riskMax == 5){
-            var resrate = 1.1 * 13;
-            
-        }else if (riskMax == 4){
-            var resrate = 1.1 * 8;
-            Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
-        }else if (riskMax == 3){
-            var resrate = 1.1 * 5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 2){
-            var resrate = 1.1 * 2.5;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else if (riskMax == 1){
-            var resrate = 1.1 * 1;
-            Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
-        }else{
-            Result= "No match in risk rank";
-        }
-        break;
-    default:
-        Result = "";        
+if (riskMax == 1 && resLike == ""){
+    return "<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+riskMax+"</div>";
+}else if (riskMax > 1 && resLike == ""){
+    return "Please select Residual Likelihood";
+}else{
+    switch(resLike){
+        case "Almost Certain - 5":
+            if (riskMax == 5){
+                var resrate = 7 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 7 * 8;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var inhrresrateate = 7 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 7 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 7 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Likely - 4":
+            if (riskMax == 5){
+                var resrate = 5 * 13;
+                Result = "<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 5 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 5 * 5;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 5 * 2.5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 5 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Possible - 3":
+            if (riskMax == 5){
+                var resrate = 3 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 3 * 8;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 3 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 3 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 3 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Unlikely - 2":
+            if (riskMax == 5){
+                var resrate = 2 * 13;
+                Result ="<div style='background-color:orange;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"HIGH - "+resrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 2 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 2 * 5;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 2 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 2 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        case "Rare - 1":
+            if (riskMax == 5){
+                var resrate = 1.1 * 13;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+inhrate+"</div>";
+            }else if (riskMax == 4){
+                var resrate = 1.1 * 8;
+                Result ="<div style='background-color:yellow;color:black;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"MEDIUM - "+resrate+"</div>";
+            }else if (riskMax == 3){
+                var resrate = 1.1 * 5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 2){
+                var resrate = 1.1 * 2.5;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else if (riskMax == 1){
+                var resrate = 1.1 * 1;
+                Result ="<div style='background-color:green;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"LOW - "+resrate+"</div>";
+            }else{
+                Result= "No match in risk rank";
+            }
+            break;
+        default:
+            Result = "";        
+    }
+    return Result;
 }
-return Result;
+
+
+
 
 
 //Result ="<div style='background-color:red;color:white;padding:2px8px2px8px;position:relative;left:37%;border-radius:4px;width:140px;text-align:center;font-weight:bold;font-size:16px'>"+"EXTREME - "+inhrate+"</div>"; 
