@@ -39,7 +39,8 @@ var result = 0;
 
 if (inhsite != ""){
     if (EA.lookup.unit[inhsite] && EA.lookup.insurable[inhsite]){
-        var inhimpbu = materdamage+incops*((downtimeday+lowcap)/365)+(lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite]);
+        //var inhimpbu = materdamage+incops*((downtimeday+lowcap)/365)+(lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite]);
+        var inhimpbu = materdamage+incops*((downtimeday+lowcap)/365)+(downtimeunit*lowcap*(1-unitload/100)*EA.lookup.insurable[inhsite]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite]);
          return (Math.round(inhimpbu)).toFixed();
     }else{
         return result.toFixed();
@@ -60,7 +61,8 @@ var result = 0;
 
 if (inhsite != ""){
     if (EA.lookup.unit[inhsite] && EA.lookup.insurable[inhsite]){
-        var inhimprev = lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite];
+        //var inhimprev = lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite];
+        var inhimprev = downtimeunit*lowcap*(1-unitload/100)*EA.lookup.insurable[inhsite]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite];
          return (Math.round(inhimprev)).toFixed();
     }else{
         return result.toFixed();
@@ -145,7 +147,8 @@ var result = 0;
 
 if (inhsite != ""){
     if (EA.lookup.unit[inhsite] && EA.lookup.insurable[inhsite]){
-        var resimpbu = materdamage+incops*((downtimeday+lowcap)/365)+(lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite]);
+        //var resimpbu = materdamage+incops*((downtimeday+lowcap)/365)+(lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite]);
+        var resimpbu = materdamage+incops*((downtimeday+lowcap)/365)+(downtimeunit*lowcap*(1-unitload/100)*EA.lookup.insurable[inhsite]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite]);
          return (Math.round(resimpbu)).toFixed();
     }else{
         return result.toFixed();
@@ -166,7 +169,8 @@ var result = 0;
 
 if (inhsite != ""){
     if (EA.lookup.unit[inhsite] && EA.lookup.insurable[inhsite]){
-        var resimprev = lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite];
+        //var resimprev = lowcap*24*(1-unitload/100)*EA.lookup.unit[inhsite]["value"]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite];
+        var resimprev = downtimeunit*lowcap*(1-unitload/100)*EA.lookup.insurable[inhsite]+downtimeday*downtimeunit*EA.lookup.insurable[inhsite];
          return (Math.round(resimprev)).toFixed();
     }else{
         return result.toFixed();
