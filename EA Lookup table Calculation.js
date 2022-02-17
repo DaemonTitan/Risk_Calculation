@@ -1,4 +1,9 @@
-var EA={lookup:{unit:{},insurable:{},enterprise:{},granular:{}}};
+var EA = { lookup: { 
+    unit: {}, 
+    insurable: {}, 
+    enterprise: {}, 
+    granular: {} } 
+};
 var mgtDb:NotesDatabase=session.getDatabase('',xpGetDbPath('smformmgt.nsf'),false);
 var view1:NotesView=null;
 var doc:NotesDocument=null;
